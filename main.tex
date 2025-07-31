@@ -1,14 +1,40 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+% !TEX encoding = UTF-8 Unicode
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape] 
 
-\title{PracaInz-tex}
-\author{Krzysztof Zalewa}
-\date{July 2025}
+\documentclass[12pt, twoside]{book}
+\input{latex-settings.tex}
 
+\frontmatter
 \begin{document}
 
-\maketitle
+% \includepdf[pages={1}]{title_page/pd_mgr_pl.pdf}
+\input{title_page/pd_inz_pl.tex}
+\doublepage
+\pagestyle{tableOfContentStyle}
+\pagenumbering{Roman}
+\input{chapters/abstract.tex}
+\doublepage
+\tableofcontents 
+\doublepage
+\pagestyle{custom}
+\mainmatter
+ 
+\input{chapters/introduction.tex}
+\input{chapters/related-work.tex}
+\input{chapters/chapter1/chapter1_main.tex}
+\input{chapters/conclusions.tex}
+\resetformatting
+% Please read :
+%https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex
+\pagestyle{bibliographyStyle}
+\bibliographystyle{abbrv}
+\bibliography{bibliography}
 
-\section{Introduction}
-
+\pagestyle{custom}
+\newpage
+\pagestyle{ListofFiguresStyle}
+\listoffigures
+\newpage
+\pagestyle{ListofTablesStyle}
+\listoftables
 \end{document}

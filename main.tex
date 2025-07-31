@@ -4,17 +4,20 @@
 \documentclass[12pt, twoside]{book}
 \input{latex-settings.tex}
 
-\frontmatter
 \begin{document}
+\frontmatter
 
-% \includepdf[pages={1}]{title_page/pd_mgr_pl.pdf}
+\pagenumbering{empty}
 \input{title_page/pd_inz_pl.tex}
 \doublepage
 \pagestyle{tableOfContentStyle}
 \pagenumbering{Roman}
 \input{chapters/abstract.tex}
 \doublepage
-\tableofcontents 
+{
+    \hypersetup{linkcolor=black}
+    \tableofcontents 
+}
 \doublepage
 \pagestyle{custom}
 \mainmatter
@@ -33,8 +36,14 @@
 \pagestyle{custom}
 \newpage
 \pagestyle{ListofFiguresStyle}
-\listoffigures
+{
+    \hypersetup{linkcolor=black}
+    \listoffigures
+}
 \newpage
 \pagestyle{ListofTablesStyle}
-\listoftables
+{
+    \hypersetup{linkcolor=black}
+    \listoftables
+}
 \end{document}

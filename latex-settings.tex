@@ -9,7 +9,7 @@
 \let\lll\undefined
 
 % W przypadku wielojęzykowości ustawia główny język dokumentu
-\selectlanguage{english}
+\selectlanguage{polish}
 
 % Kodowanie dokumentu
 \usepackage[utf8]{inputenc} 
@@ -39,7 +39,6 @@
 % Fixes/improves amsmath
 \usepackage{mathtools}
 
-\renewcommand{\bibname}{Bibliografia} 
 
 % ***************************************************************************************************
 % Kolory  
@@ -116,22 +115,24 @@
 % Definiowanie własnych stylów nagłówków i/lub stopek
 \usepackage{fancyhdr}
 
+
+
 % Domyślny styl dla pracy 
 \fancypagestyle{custom}{
 	\fancyhf{}									% wyczyść stopki i nagłówki
 	\fancyhead[RO]{								% Prawy, nieparzysty nagłówek
-		\hrulefill \hspace{16pt} \large Chapter \thechapter
+		\hrulefill \hspace{16pt} \large Rozdział \thechapter
 		\put(-471.5,5.5){%
 			\makebox(0,0)[l]{%
-				\small Wrocław University of Science and Technology
+				\small Politechnika Wrocławska
 			}
 		}
 	}
 	\fancyhead[LE]{								% Lewy, parzysty nagłówek
-		\large Chapter \thechapter \hspace{16pt} \hrulefill 
-		\put(-267,5.5){%
+		\large Rozdział \thechapter \hspace{16pt} \hrulefill 
+		\put(-207,5.5){%
 			\makebox(0,0)[l]{%
-				\small Faculty of Information and Communication Technology
+				\small Wydział Informatyki i Telekomunikacji
 			}
 		}
 	}
@@ -146,18 +147,18 @@
 \fancypagestyle{ListofFiguresStyle}{
 	\fancyhf{}									% wyczyść stopki i nagłówki
 	\fancyhead[RO]{								% Prawy, nieparzysty nagłówek
-		\hrulefill \hspace{16pt} \large List of Figures
+		\hrulefill \hspace{16pt} \large Spis ilustracji
 		\put(-471.5,5.5){%
 			\makebox(0,0)[l]{%
-				\small Wrocław University of Science and Technology
+				\small Politechnika Wrocławska
 			}
 		}
 	}
 	\fancyhead[LE]{								% Lewy, parzysty nagłówek
-		\large List of Figures \hspace{16pt} \hrulefill 
+		\large Spis ilustracji  \hspace{16pt} \hrulefill 
 		\put(-267,5.5){%
 			\makebox(0,0)[l]{%
-				\small Faculty of Information and Communication Technology
+				\small Wydział Informatyki i Telekomunikacji
 			}
 		}
 	}
@@ -172,18 +173,18 @@
 \fancypagestyle{ListofTablesStyle}{
 	\fancyhf{}									% wyczyść stopki i nagłówki
 	\fancyhead[RO]{								% Prawy, nieparzysty nagłówek
-		\hrulefill \hspace{16pt} \large List of Tables
+		\hrulefill \hspace{16pt} \large Spis Tabel
 		\put(-471.5,5.5){%
 			\makebox(0,0)[l]{%
-				\small Wrocław University of Science and Technology
+				\small Politechnika Wrocławska
 			}
 		}
 	}
 	\fancyhead[LE]{								% Lewy, parzysty nagłówek
-		\large List of Tables \hspace{16pt} \hrulefill 
+		\large Spis Tabel \hspace{16pt} \hrulefill 
 		\put(-267,5.5){%
 			\makebox(0,0)[l]{%
-				\small Faculty of Information and Communication Technology
+				\small Wydział Informatyki i Telekomunikacji
 			}
 		}
 	}
@@ -199,18 +200,18 @@
 \fancypagestyle{bibliographyStyle}{
 	\fancyhf{}									% wyczyść stopki i nagłówki
 	\fancyhead[RO]{								% Prawy, nieparzysty nagłówek
-		\hrulefill \hspace{16pt} \large Bibliography
+		\hrulefill \hspace{16pt} \large Bibliografia
 		\put(-471.5,5.5){%
 			\makebox(0,0)[l]{%
-				\small Wrocław University of Science and Technology
+				\small Politechnika Wrocławska
 			}
 		}
 	}
 	\fancyhead[LE]{								% Lewy, parzysty nagłówek
-		\large Bibliography \hspace{16pt} \hrulefill 
+		\large Bibliografia \hspace{16pt} \hrulefill 
 		\put(-267,5.5){%
 			\makebox(0,0)[l]{%
-				\small Faculty of Information and Communication Technology
+				\small Wydział Informatyki i Telekomunikacji
 			}
 		}
 	}
@@ -225,7 +226,7 @@
 \fancypagestyle{appendixStyle}{
 	\fancyhf{}									% wyczyść stopki i nagłówki
 	\fancyhead[RO]{								% Prawy, nieparzysty nagłówek
-		\hrulefill \hspace{16pt} \large Appendix \thechapter
+		\hrulefill \hspace{16pt} \large Dodatek \thechapter
 		\put(-472.1, 12.1){%
 			\makebox(0,0)[l]{%
 				\includegraphics[width=0.05\textwidth]{resources/pwr-logo}
@@ -233,7 +234,7 @@
 		}
 		\put(-443,5.5){%
 			\makebox(0,0)[l]{%
-				\small Wrocław University of Science and Technology
+				\small Wydział Informatyki i Telekomunikacji
 			}
 		}
 	}
@@ -246,7 +247,7 @@
 		}
 		\put(-220,5.5){%
 			\makebox(0,0)[l]{%
-				\small Faculty of Information and Communication Technology
+				\small Wydział Informatyki i Telekomunikacji
 			}
 		}
 	}

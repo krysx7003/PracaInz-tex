@@ -1,3 +1,19 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{pedrobarcha2024}
+P.~Barcha.
+\newblock Old books dataset.
+\newblock \url{https://github.com/PedroBarcha/old-books-dataset}, 2024.
+\newblock Accessed: 2024.
+
+\bibitem{marti2002}
+U.~Marti and H.~Bunke.
+\newblock The iam-database: An english sentence database for off-line handwriting recognition.
+\newblock {\em International Journal on Document Analysis and Recognition}, 5:39--46, 2002.
+
+\bibitem{smith2007}
+R.~Smith.
+\newblock An overview of the tesseract ocr engine.
+\newblock In {\em Ninth International Conference on Document Analysis and Recognition (ICDAR)}, volume~2, pages 629--633, 2007.
 
 \end{thebibliography}

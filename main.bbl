@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{pedrobarcha2024}
 P.~Barcha.
@@ -6,10 +6,45 @@ P.~Barcha.
 \newblock \url{https://github.com/PedroBarcha/old-books-dataset}, 2024.
 \newblock Accessed: 2024.
 
+\bibitem{chowdhury2025}
+A.~Chowdhury, A.~A. Sami, S.~M.~P. Mamun, S.~Absar, F.~Biswas, and M.~Kohinoor.
+\newblock Performance analysis of tesseract and easyocr for bangla optical character recognition on the novel bangla crosshair dataset.
+\newblock In {\em Proceedings of the International Conference on Computer and Communication Systems}, 01 2025.
+
+\bibitem{cui2025paddleocr}
+C.~Cui, T.~Sun, M.~Lin, T.~Gao, Y.~Zhang, J.~Liu, X.~Wang, Z.~Zhang, C.~Zhou, H.~Liu, Y.~Zhang, W.~Lv, K.~Huang, Y.~Zhang, J.~Zhang, J.~Zhang, Y.~Liu, D.~Yu, and Y.~Ma.
+\newblock Paddleocr 3.0 technical report.
+\newblock {\em arXiv preprint}, 2025.
+
+\bibitem{hegghammer2022}
+T.~Hegghammer.
+\newblock Ocr with tesseract, amazon textract, and google document ai: a benchmarking experiment.
+\newblock {\em Journal of Computational Social Science}, 5:861--882, 2022.
+
+\bibitem{easy2024}
+JaidedAI.
+\newblock Ready-to-use ocr.
+\newblock \url{https://github.com/JaidedAI/EasyOCR}, 2024.
+
+\bibitem{li2023}
+Y.~Li.
+\newblock Synergizing optical character recognition: A comparative analysis and integration of tesseract, keras, paddle, and azure ocr.
+\newblock {\em University of Sydney Technical Reports}, 45:45--60, 2023.
+
 \bibitem{marti2002}
 U.~Marti and H.~Bunke.
 \newblock The iam-database: An english sentence database for off-line handwriting recognition.
 \newblock {\em International Journal on Document Analysis and Recognition}, 5:39--46, 2002.
+
+\bibitem{doctr2021}
+Mindee.
+\newblock doctr: Document text recognition.
+\newblock \url{https://github.com/mindee/doctr}, 2021.
+
+\bibitem{ayyasamy2015}
+V.~S and S.~A.
+\newblock Performance comparison of ocr tools.
+\newblock {\em International Journal of UbiComp}, 6(3):19–30, July 2015.
 
 \bibitem{smith2007}
 R.~Smith.

@@ -1,0 +1,17 @@
+\label{sec:docTR}
+Algorytm ten jest skupiony na rozpoznawaniu dokumentów takich jak skany faktur,paragonów, formularzy czy listów.
+Stąd też nazwa Document Text Recognition czy docTR w skrócie.  
+Główną filozofią tego projektu jest "bezproblemowe optyczne rozpoznawanie znaków dostępne dla każdego"\cite{doctr2021}.
+Algorytm ten stosuje dwuetapowe podejście do rozpoznawania tekstu:
+\begin{enumerate}
+    \item \textbf{Wkrywanie tekstu} - DocTr pozwala na wykorzystanie w tym celu wielu różnych modeli.
+        Jednakże większość z nich,podobnie jak w \nameref{sec:tesseract} i \nameref{sec:paddle}, oparta jest na konwolucyjnych 
+        sieciach neuronowych. Jednakże w przeciwieństwie do tych dwóch algorytmów docTr używa piramidy cech (z ang. Feature 
+        Pyramid Network) co pozwala na odczyt tekstu w wielu różnych rozmiarach (Przydatne na przykład do odróżnienia nagłówka od 
+        adnotacji itp.). Następnie algorytm dla każdego piksela w obrazie przewiduje czy jest on w obszarze tekstowym i tworzy 
+        wielokąty wokół wykrytego tekstu.
+    \item \textbf{Rozpoznanie tekstu} - Podobnie jak \nameref{sec:paddle} docTr najpierw rozpoznaje cechy charakterystyczne tekstu przy
+        pomocy CNN. Jednakże do odróżnienia znaków używana jest dwukierunkowa rekurencyjna sieć neuronowa. Sieć ta różni się od
+        zwykłej sieci RNN tym że czyta sekwencje znaków od lewej do prawej a następnie od prawej do lewej. W niektórych
+        przypadkach ciąg liter "cl" może być bardzo zbliżony do "d". Dlatego też zabieg ten redukuje możliwość pomylenia znaków. 
+\end{enumerate}

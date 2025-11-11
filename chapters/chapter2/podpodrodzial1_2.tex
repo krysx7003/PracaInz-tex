@@ -1,0 +1,24 @@
+\label{sec:paddle}
+Pomimo tego, że algorytm ten jest stosunkowo nowy (pierwsze wersje zostały wypuszczone w 2020 roku\cite{cui2025paddleocr}).
+Paddle OCR jest drugim pod względem popularności algorytmem(zaraz po Tesserakcie).
+Początkowo pierwsze wersje algorytmu skupiały się na balansie między jakością wyniku a czasem jego otrzymania.
+Wraz z czasem w kolejnych wersjach udoskonalano wydajność algorytmu oraz rozszerzano jego umiejętności 
+(Np. obsługą wielu języków, rozpoznawanie pisma ręcznego).
+Najnowsze wersje tego algorytmu(W pracy użyto wersji 3.2.0) składają się trzech głównych modułów.
+\textbf{PP-OCR} Rdzeń całego algorytmu służący do rozpoznawania znaków na obrazie.
+\textbf{PP-Structure} Moduł służący do rozpoznawania ustrukturyzowanych obrazów (np. Zawierających tabele).
+\textbf{PP-ChatOCR} Moduł służący do ekstrakcji kluczowych informacji z obrazów przy pomocy dużego modelu językowego(z ang. Larg Language Model lub LLM).
+W tej pracy zastosowany został jedynie moduł PP-OCR.
+Działa on w następujących krokach:
+\begin{enumerate}
+    \item \textbf{Preprocesowanie} - W celu uzyskania jak najlepszej jakości obrazu algorytm może usunąć niektóre zniekształcenia oraz problemy z orientacją obrazu. 
+    \item \textbf{Wykrycie tekstu} - Algorytm tworzy mapę prawdopodobieństwa, w której każdy piksel ma przydzieloną wartość określającą jakie jest prawdopodobieństwo,
+        że piksel ten jest częścią obszaru tekstowego. Następnie przy pomocy binaryzacji różniczkowalnej (ang. Differentiable Binarization) dynamicznie
+        określany jest próg pomiędzy tekstem a tłem. Ostatecznie na podstawie tej mapy tworzone są wielokąty będące zarysem obszaru tekstowego.
+    \item \textbf{Wykrycie orientacji linii} - Wykryty tekst dzielony jest na linie. Następnie algorytm upewnia się, że wykryte linie tekstu są w prawidłowej orientacji 
+    \item \textbf{Rozpoznanie tekstu} - Poprzez zastosowanie konwolucyjnej sieci neuronowej (z ang. Convolutional Neural Network lub CNN)
+        wykrywane są charakterystyczne elementy tekstu jak pociągnięcia, krzywe i pętle. Elementy te podawane są do rekurencyjnej sieci neuronowej 
+        (z ang. Recurrent Neural Network lub RNN), która dzięki możliwości "zapamiętania" poprzednich elementów jest w stanie odróżnić poszczególne znaki.
+        Na koniec koneksjonistyczna klasyfikacja czasowa (z ang. Connectionist Temporal Classification lub CTC) działa jako mechanizm wyrównywania i zwijania 
+        i znajduje najbardziej prawdopodobny napis (Np. "ccccczzzzzaaass" zostaje zmienione na "czas") 
+\end{enumerate}

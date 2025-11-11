@@ -1,0 +1,15 @@
+EasyOCR jest jednym z nowszych algorytmów użytych w tej pracy (Pierwsza wersja pochodzi z 2019 roku\cite{easy2024}).
+Rozwojem tego projektu zajmuje się zespół Jaided AI specjalizujący się w wizji komputerowej i uczeniu maszynowym.
+Mimo stosunkowo krótkiej historii algorytm ten stał się popularny w śród deweloperów o raz w kręgach akademickich.
+Projekt ten priorytetyzuje prostotę, szybkość oraz wygodę w użytkowaniu.
+Podobnie jak \nameref{sec:docTR} algorytm ten działa w dwóch krokach:
+\begin{enumerate}
+    \item \textbf{Wkrywanie tekstu} - W przeciwieństwie do pozostałych algorytmów EasyOCR w tym kroku korzysta
+        z modelu CRAFT (z ang. Character-Region Awareness For Text detection). Model ten tworzy dwie mapy 
+        prawdopodobieństwa. W pierwszej mapie zapisane jest prawdopodobieństwo tego że dany piksel znajduje się na środku
+        znaku. Druga mapa zawiera prawdopodobieństwo tego że dany piksel jest na środku przerwy między znakami.
+        Nakładając na siebie te dwie mapy model jest w stanie precyzyjnie wyliczyć zarys każdego znaku a następnie 
+        wyrysować wielokąt zawierający w sobie dane słowo.
+    \item \textbf{Rozpoznanie tekstu} - Ten krok jest już znacznie bardziej standardowy. Przebiega podobnie jak 
+        analogiczny krok w algorytmie \nameref{sec:docTR}.  
+\end{enumerate}

@@ -1,4 +1,26 @@
 \Chapter{Aspekt badawczy}\label{chapter:rozdzialczwarty}
 
-\section{Opis problemu}
+\textbf{Protokuł eksperymentalny}
+W celu zapewnienia rzetelności procedury badawczej, wszystkie ekseprymenty zostały przeprowadzone przy pomocy
+2-foldowej stratyfikowanej walidacji krzyżowej powtórzonej 5-krotnie. 
+Otrzymane w ten sposób wyniki porównano przy pomocy testu Wilcoxona dla par obserwacji gdzie $\alpha = 0.05$.
+Aby udowodnić że różnice między wynikami nie są losowe użyto połączonego testu F dla walidacji 
+krzyżowej (Combined 5×2 CV F-test).
+
+\textbf{Metryki oceny}
+Skuteczność algorytmów oceniano na podstawie współczynnika błędów znakowych (Character Error Rate).
+Dla oceny wydajności obliczeniowej wykorzystano średni czas przetwarzania pojedynczej strony tekstu.
+
+\textbf{Pytania badawcze}
+\begin{enumerate}
+    \item Który algorytm zapewnia najlepszy kompromis między dokładnością a szybkością przetwarzania?
+    \item W jakim stopniu opracowany autorski zbiór danych jest porównywalny z uznanymi benchmarkami OCR pod względem trudności i zdolności do weryfikacji podstawowej skuteczności algorytmów?
+    \item W jakim stopniu rodzaj i stopień wybranych zniekształceń wpływa na wyniki algorytmów OCR?
+    \item W jakim stopniu wybrane kroje pisma wypływają na dokładność działania wybranych algorytmów?
+\end{enumerate}
+
+\section{Scenariusze eksperymentów}
 \input{chapters/chapter4/podrozdzial1.tex}
+
+\section{Eksperymenty}
+\input{chapters/chapter4/podrozdzial2.tex}

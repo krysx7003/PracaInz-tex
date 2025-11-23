@@ -1,10 +1,82 @@
 \Chapter{Aspekt inżynierski}\label{chapter:rozdzialtrzeci}
 
-Implementacja wybranych, znanych z literatury metod optycznego rozpoznawania znaków (ang. optical character recognition <OSR>). Opracowanie autorskiego zbioru danych – na podstawie treści samodzielnie pozyskanych z serwisu wolnelektury.pl z wykorzystaniem dostępnego publicznie API – na potrzeby ewaluacji zaimplementowanych algorytmów. 
-Całość implementacji zostanie wykonana w języku Python z wykorzystaniem właściwie dobranych bibliotek programistycznych. Dodatkowo, na potrzeby ewaluacji, opracowane oraz zaimplementowane zostanie odpowiednie środowisko eksperymentalne.
 
-\section{Wybór algorytmów OCR}
-\input{chapters/chapter3/podrozdzial1.tex}
+\section{Wybrane modyfikatory tekstu}
+
+{\large \textbf{Kroje pisma}}
+
+    Do wykonania autorskiego zboiru danych wykorzystano następujące kroje pisma.
+
+    \textbf{Allura Regular}
+
+    Ten krój ma symulować pismo odręczne. Jednakże jak widać na poniższej próbce 
+    (Rys \ref{fig:allura}) znaki w tym kroju są ze sobą połączone. Może to utrudniać
+    rozpoznanie poszczególnych znaków, co wpłynie na wyniki algorytmów.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{images/Allura.png}
+        \caption{}\label{fig:allura}
+    \end{figure}
+    
+    \textbf{Caveat}
+
+    Podobnie jak poprzedni krój, Caveat ma przypominać pismo odręcznie. Jednakże
+    w przeciweństwie do poprzednika w tym kroju znaki są wraźnie rozdzielone 
+    (Rys \ref{fig:caveat}).
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{images/Caveat.png}
+        \caption{}\label{fig:caveat}
+    \end{figure}
+
+
+    \textbf{Times New Roman}
+    
+    W przeciwieństwie do poprzednich krojów Times New Roman nie jest stylizowany
+    na pismo odręczne (Rys \ref{fig:times}). Jest to jeden z bardziej popularnych
+    krojów szeryfowych. Szeryfy to poprzeczne lub ukośne zakończenia głównych %% Citation needed 
+    pociągnięć znaków.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{images/Times.png}
+        \caption{}\label{fig:times}
+    \end{figure}
+
+    \textbf{Ubuntu}
+
+    Kroje szeryfowe są popularne w publikacjach papierowych, jednakże podczas
+    czytania tekstu elektronicznego mogą być one męczące dla oczu. Dlatego 
+    obecnie coraz częściej stosowane są kroje bez-szeryfowe (ang. sans-sreif).
+    Ubuntu jest przykładem takiego kroju (Rys \ref{fig:ubuntu}).
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{images/Ubuntu.png}
+        \caption{}\label{fig:ubuntu}
+    \end{figure}
+
+{\large \textbf{Zniekształcenia obrazu}}
+
+    \begin{enumerate}
+        \item
+    \end{enumerate}
+
 
 \section{Akwizycja danych}
-\input{chapters/chapter3/podrozdzial2.tex}
+    
+{\large \textbf{Interfejs programistyczny WolneLektury.pl}}
+
+
+%% Listing funkcji do scrapowania
+
+{\large \textbf{Ekstrakcja tekstu}}
+
+%% Listing funkcji do ekstrakcji tekstu i podziału na strony
+
+{\large \textbf{Przygotowanie obrazów}}
+
+%% Listing funkcji do generowania obrazów
+

@@ -1,11 +1,36 @@
 \Chapter{Wstęp}\label{chapter:wstep}
 
-\section{Opis problemu}
-\input{chapters/chapter1/podrozdzial1.tex}
+W wyniku skanowania dokumentów powstają obrazy zawierające teksty. Jednakże większość narzędzi do przetwarzania tekstu
+nie jest w stanie operować na plikach graficznych. Aby rozwiązać ten problem, można zastosować algorytmy optycznego
+rozpoznawania znaków (Optical Character Recognition lub OCR). Są to narzędzia, które umożliwiają rozpoznanie tekstu na
+obrazie oraz zapisanie go w formie bardziej dogodnej do przetwarzania.
+
+Jeden z pierwszych takich algorytmów powstał w roku 1974, a jego twórcą był Ray Kurzweil. Początkowo algorytm ten miał
+na celu ułatwienie funkcjonowania osobom z niepełnosprawnością wzrokową. Tekst był najpierw skanowany, a następnie 
+przetwarzany przez OCR, dzięki czemu mógł on zostać odczytany na głos. Pierwsze algorytmy rozpoznawania znaków
+opierały się na skomplikowanym zbiorze zasad i reguł. Wraz ze wzrostem popularności sztucznej inteligencji oraz metod
+uczenia maszynowego, algorytmy OCR stopniowo zaczęły korzystać z coraz częściej korzystać z tych technologii. Dzięki 
+temu nie tylko poprawiła się dokładność tych algorytmów, ale także zwiększyła się liczba obsługiwanych krojów pisma 
+oraz języków. Obecnie zdecydowana większość takich algorytmów wykorzystuje zaawansowane metody sztucznej inteligencji.
+
+Współcześnie narzędzia te nadal służą osobom z różnymi niepełnosprawnościami, jednakże zakres zastosowań algorytmów OCR
+znacznie się poszerzył i obejmuje inne dziedziny. Są one niezbędnym elementem w procesie digitalizacji
+tekstów historycznych, automatyzacji procesów biznesowych, przetwarzania dokumentów urzędowych oraz w aplikacjach mobilnych.
+
+Mimo tego że algorytmy OCR są bardzo popularne, jest kilka kluczowych problemów, które mogą wpłynąć na ich funkcjonowanie. 
+Jednym z nich jest pismo odręczne (oraz kroje pisma je imitujące). Ten typ pisma jest bardzo zróżnicowany każdy człowiek 
+ma swój własny charakter pisma. Zapisane znaki różnią się kształtem, rozmiarem czy nachyleniem. Ponad to zdarza się, że
+w tym samym zdaniu te same znaki mogą się znacznie różnić. Wszystkie te czynniki sprawiają, że wiele algorytmów OCR
+ma mniejszą skuteczność w rozpoznawaniu pisma odręcznego od pisma maszynowego.
+
+Kolejnym problemem jest jakość dostarczonego obrazu. W rzeczywistości rzadko spotykane są przypadki gdy, skanowany tekst
+jest równomiernie oświetlony, nie ma na nim cieni lub papier, na którym znajduje się tekst, jest niepogięty. Takie 
+zniekształcenia mogą utrudnić rozdzielenie tekstu od tła, przez co skuteczność algorytmu zmaleje.
 
 \section{Cel pracy}
-\input{chapters/chapter1/podrozdzial2.tex}
+Celem pracy było utworzenie autorskiego zbioru danych służącego do testowania wydajności algorytmów OCR. Zbiór zawiera
+dokumenty o zróżnicowanej charakterystyce, uwzględniając m.in. różne kroje, a także modyfikacje utrudniające poprawne 
+odczytanie treści. Zbiór ten został opracowany przy pomocy interfejsu programistycznego (API) serwisu WolneLektury.pl.
+Serwis ten zawiera bogaty zbiór książek, opowiadań oraz wierszy, wszystkie dostępne tam pozycje znajdują się w domenie
+publicznej.
 
-Celem pracy jest porównanie, w oparciu o eksperymenty komputerowe, działania wybranych algorytmów optycznego rozpoznawania znaków.
-Kluczowym elementem pracy jest pozyskanie i opracowanie autorskiego zbioru danych, składającego się z treści dostępnych za pośrednictwem publicznie dostępnego API serwisu wolnelektury.pl, który pozwoli na rzetelną ewaluację znanych z literatury algorytmów OSR.
-Opracowany zbiór zawierał będzie dokumenty o zróżnicowanej charakterystyce, uwzględniając m.in. różne kroje i stopnie pisma, a także modyfikacje utrudniające poprawne odczytanie treści.

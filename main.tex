@@ -1,15 +1,15 @@
-% !TEX encoding = UTF-8 Unicode
-% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape] 
+% !tex encoding = utf-8 unicode
+% !tex txs-program:compile = txs:///pdflatex/[--shell-escape] 
 
 \documentclass[12pt, twoside]{book}
 \input{latex-settings.tex}
 
 \begin{document}
 
-\renewcommand{\listfigurename}{Spis ilustracji}
-\renewcommand{\listtablename}{Spis tabel}
 \renewcommand{\bibname}{Bibliografia}
 \renewcommand{\contentsname}{Spis treści}
+\renewcommand{\figurename}{Rysunek}
+\renewcommand{\lstlistingname}{Kod źródłowy}
 
 \frontmatter
 
@@ -28,10 +28,11 @@
 \mainmatter
  
 \input{chapters/chapter1/chapter1_main.tex}
-
 \input{chapters/chapter2/chapter2_main.tex}
 \input{chapters/chapter3/chapter3_main.tex}
 \input{chapters/chapter4/chapter4_main.tex}
+\input{chapters/chapter5/chapter5_main.tex}
+\input{chapters/chapter6/chapter6_main.tex}
 \input{chapters/conclusions.tex}
 
 \resetformatting
@@ -41,17 +42,4 @@
 \bibliographystyle{abbrv}
 \bibliography{bibliography}
 
-\pagestyle{custom}
-\newpage
-\pagestyle{ListofFiguresStyle}
-{
-    \hypersetup{linkcolor=black}
-    \listoffigures
-}
-\newpage
-\pagestyle{ListofTablesStyle}
-{
-    \hypersetup{linkcolor=black}
-    \listoftables
-}
 \end{document}

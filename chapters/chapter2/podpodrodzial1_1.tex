@@ -12,11 +12,11 @@ Algorytm ten działa w następujących krokach:
         Celem tego kroku była eliminacja potrzeby korekty przekrzywienia.
     \item Podział linii na słowa.
     \item Pierwsza iteracja rozpoznawania. 
-        Zaczynając na górze strony algorytm próbuje rozpoznać każde kolejne słowo. Jeżeli jest duże prawdopodobieństwo
-        że słowo jest poprawne jest ono wykorzystywane do douczenia klasyfikatora. W ten sposób z każdym kolejnym słowem
+        Zaczynając na górze strony algorytm próbuje rozpoznać każde kolejne słowo. Tokeny rozpoznane z wysokim stopniem
+        pewności są wykorzystywane do douczenia klasyfikatora. W ten sposób z każdym kolejnym słowem
         celność klasyfikatora powinna rosnąć.
     \item Druga iteracja rozpoznawania.
-        Po wykonaniu pierwszej iteracji jest duże prawdopodobieństwo że klasyfikator uzyskałby lepsze wyniki. Więc
+        Po wykonaniu pierwszej iteracji istnieje szanasa, że klasyfikator uzyskałby lepsze wyniki. Więc
         po raz drugi algorytm próbuje rozpoznać tekst na stronie i aktualizuje słowa które były mniej celnie rozpoznane.
 
 \end{enumerate}

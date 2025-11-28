@@ -1,0 +1,29 @@
+Obrazy wyjściowe generowane były w rozdzielczości odpowiadającej standardowemu formatowi A4
+(2480 × 3508 pikseli), przy założeniu rozdzielczości 300 DPI (dots per inch). W przyjętej 
+konfiguracji, tekst na obrazach miał rozmiar 60 pikseli a marginesy 100 pikseli. W celu
+zapewnienia pełnej widoczności tekstu oraz uniknięcia jego przycięcia, podzielono go na 
+fragmenty zawierające $x$ linii tekstu. Wartość $x$ wyliczono za pomocą poniższego wzoru:
+\[
+    x = \left\lfloor \frac{H - 2m}{h} \right\rfloor
+\]
+Gdzie:
+\begin{itemize}
+    \item $H$ - Wysokość obrazu (3508 px)
+    \item $m$ - Margines (100 px)
+    \item $r$ - Rozmiar tekstu (60 px + odstęp między wierszowy)
+\end{itemize}
+
+Do generacji obrazów wykorzystano bibloitekę \texttt{Pillow}, jest to standardowa 
+biblioteka do generacji obrazów w języku Python. Zaletą wykorzystania tej 
+biblioteki jest prostota zmiany kroju pisma użytego do generacji. \texttt{Pillow}
+udostępnia klasę FreeTypeFont, która pozwala na załadowanie pliku w formacie ttf.
+Następnie załadowany krój pisma można przekazać jako argument podczas rysowania 
+tekstu.
+
+%% Opisać generację obrazów zniekształconych
+
+\lstinputlisting[     
+    language=Python,
+    caption={Fragment autorskiej klasy ImageGenerator odpowiedzialnej za generację obrazów},
+    label={lst:generate}
+]{code/extract.py} %% Zmienić to

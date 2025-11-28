@@ -32,6 +32,7 @@
 
 % Dodatkowa, ,,kręcona'' czcionka matematyczna
 \usepackage{mathrsfs}
+\usepackage{ragged2e}\usepackage{ragged2e}\usepackage{ragged2e}
 
 % Dodatkowe wsparcie dla środowiska mathbb, które nie wspiera domyślnie cyfr (\mathbb{})
 %\usepackage{bbold}
@@ -86,7 +87,24 @@
 
 % Listowanie kodów źródłowych
 \usepackage{listings} 
-\renewcommand{\lstlistingname}{Source code} % Polska nazwa listingu
+
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\footnotesize,
+    frame=single,
+    numbers=left,
+    numberstyle=\scriptsize,
+    showstringspaces=false,
+    breaklines=true,
+    backgroundcolor=\color{gray!8},
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{orange},
+    xleftmargin=2em,
+    xrightmargin=2em
+}
+
+
 
 % ***************************************************************************************************
 % Marginesy 

@@ -1,24 +1,66 @@
-\textbf{Eksperyment 1 \- Porównanie szybkości przetwarzania a jakości wyników }
-Celem pierwszego eksperymentu jest analiza związku między czasem przetwarzania a jakością
-otrzymanych wyników. 
-Eksperyment zostanie przeprowadzony na główny podzbiorze(Bez zniekształceń oraz standardowy 
-krój pisma) autorskiego zbioru danych.
+Dane do zbioru zostały pozyskane z serwisu WolneLektury.pl. Dostęp do tych danych możliwy
+jest poprzez publiczny iterfejs programistyczny (Application Programming Interface – API),
+dostępny pod adresem bazowym: https://wolnelektury.pl/api/.
 
-\textbf{Eksperyment 2 \- Porównanie autorskiego zbioru z uznanymi benchmarkami }
-Celem tego eksperymentu jest uzasadnienie, autorski zbiór danych jest porównywalny
-z innymi benchmarkami algorytmów OCR(Zbiory IAM oraz old-books-dataset).
-Podobnie jak w przypadku eksperymentu 1 w tym ekseprymencie zostanie wykorzystany główny 
-podozbiór autorskiego zbioru.
+Architektura API opiera się na zasadach REST (Representational State Transfer), oferując
+strukturalny dostęp do zasobów poprzez logiczne endpointy. Serwis WolneLektury.pl
+udostępnia wiele punktów dostępu, jednakże te najważniejsze dla tej pracy to:
 
-\textbf{Eksperyment 3 \- Wpływ zniekształceń obrazu }
-Trzeci eksperyment ma na celu zbadanie wpływu zastosowanych zniekształceń obrazu (Pochylenie 
-perspektywiczne, falowanie tekstu, częściowe zacienienie, Symulacja kropli wody na obiektywie)
-na otrzymane wyniki.
-Dla każdego rodzaju zniekształcenia zostanie wygenerowany podzbiór.
-Eksperyment zostanie przeprowadzony na tych podzbiorach.
+\begin{itemize}
+    \item /api/books/ – Wszystkie utwory
+    \item /api/authors/ – Lista autorów
+\end{itemize}
+Domyślnie dane otrzymywane w wyniku zapytania są serializowane w formacie JSON, możliwa jest też zmiana
+na format XML (poprzez dodanie parametru ?format=xml do zapytania). Jednakże w tej pracy 
+wykorzystano domyślny format.
 
-\textbf{Eksperyment 4 \- Wpływ krojów pisma}
-Natomiast celem czwartego eksperymentu jest zbadanie wpływu wybranych krojów pisma (Brightlast,
-Tangerine,Ubuntu-B,Times New Roman oraz Fira Mono) na otrzymane wyniki.
-Dla każdego kroju pisma zostanie wygenerowany podzbiór.
-Eksperyment zostanie przeprowadzony na tych podzbiorach.
+Mechanizm filtrowania i precyzyjnego wyszukiwania rekordów realizowany jest poprzez rozbudowę
+ścieżki URL o odpowiednie parametry. Na przykład zapytanie pod adres \\ /api/authors/adam-mickiewicz/
+zwraca informacje o autorze "adam-mickiewicz".
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/mickiewicz.png}
+    \caption{}\label{fig:mickiewicz}
+\end{figure}
+
+Najważniejszą funkcjonalnością tego API z punktu widzenia tej pracy jest możliwość łączenia 
+endpointów w łańcuchy zapytań. Dzięki temu możliwe jest dokładne definiowanie podzbiorów danych.
+Dla ilustracji, zapytanie /api/authors/adam-mickiewicz/books/ zwraca metadane dla książek, których
+autorem jest Adam Mickiewicz.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/mickiewicz-books.png}
+    \caption{}\label{fig:mickiewicz-books}
+\end{figure}
+Wynik takiego zapytania zawiera listę skróconych opisów pozycjii. Aby
+otrzymać dokładniejsze dane na temat danej książki należy wykorzystać atrybut "href", który zawiera
+link do sczegółowego opisu pozycji.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/ballady-i-romanse-1.png}
+    \caption{}\label{fig:ballady-1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/ballady-i-romanse-2.png}
+    \caption{}\label{fig:ballady-2}
+\end{figure}
+
+W sczegółowych danych na temat książki najważniejsze, z punktu widzenia tej pracy, były pola "epub",
+"html","txt" oraz "xml". Zawierają one linki do pobrania zawartości książki w odpowiednim formacie.
+
+\lstinputlisting[     
+    language=Python,
+    caption={Fragment kodu odpowiedzialny za pobieranie metadanych pozycji.},
+    label={lst:book-list}
+]{code/book_list.py}
+Podczas tworzenia zbioru stała AUTHOR zawierała napis "adam-mickiewicz". Ten fragment kodu
+odpowiedzialny jest za pobranie listy książek dla wybranego autora. Book to autorska
+klasa służąca do deserializacji danych w formacie JSON.
+
+\lstinputlisting[     
+    language=Python,
+    caption={Fragment kodu odpowiedzialny za pobranie podanej pozycji},
+    label={lst:scrape}
+]{code/scrape.py}

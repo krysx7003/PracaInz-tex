@@ -1,0 +1,29 @@
+Początkowo rozważono wykorzystanie formatów tekstowych, takich jak TXT, HTML oraz XML, które
+ze względu na swoją prostą, czytelną dla maszyn strukturę, wydawały się obiecującym
+rozwiązaniem problemu ekstrakcji treści. Proces pozyskania danych z tych formatów sprowadzałby
+się wówczas do bezpośredniego odczytu i parsowania plików.
+
+Okazało się jednak, że zasoby udostępniane w tych formatach przez serwis WolneLektury.pl są
+często niekompletne w kontekście całych zbiorów dzieł. Dla zilustrowania tego problemu można
+posłużyć się przykładem cyklu „Ballady i romanse” Adama Mickiewicza, który składa się z czternastu
+osobnych utworów. Tymczasem pliki w formatach TXT, HTML i XML dostępne do pobrania dla tego cyklu
+zawierają wyłącznie tekst pojedynczego wiersza „To lubię”, pomijając pozostałe części dzieła.
+
+Wobec powyższych ograniczeń, ostatecznym wyborem formatu źródłowego do budowy korpusu wybrany 
+został format EPUB. Format ten można traktować jako format binarny, jednakże w rzeczywistości
+jest to archiwum zawierające ustrukturyzowane pliki (X)HTML, metadane oraz zasoby multimedialne.
+Taka struktura znacząco komplikuje proces ekstrakcji tekstu w porównaniu z prostymi formatami
+tekstowymi. Aby uprościć proces wydobywania tekstu z plików EPUB, wykorzystano biblioteki:
+\texttt{EbookLib} do niskopoziomowego parsowania struktury archiwum EPUB oraz
+\texttt{Beautiful Soup} do przetwarzania i ekstrakcji czystego tekstu z sekcji HTML zawartych
+w książce.
+
+\lstinputlisting[     
+    language=Python,
+    caption={Fragment autorskiej klasy TextExtractor odpowiedzialnej za ekstrakcję tekstu},
+    label={lst:extract}
+]{code/extract.py}
+Plik źródłowy zostaje otwarty przy pomocy funkcji z biblioteki \texttt{EbookLib}. Otrzymane
+w ten sposób to pliki składowe archiwum jakim jest format EPUB. Pliki te składają się z 
+wielu elementów, jednakże na potrzeby tej pracy wykorzystano dane z elementów typu
+"h2" i "div". Zawierają one odpowiednio nagłówki oraz główny tekst z publikacji.

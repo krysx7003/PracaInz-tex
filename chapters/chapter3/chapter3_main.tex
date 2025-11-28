@@ -1,82 +1,20 @@
-\Chapter{Aspekt inżynierski}\label{chapter:rozdzialtrzeci}
+\Chapter{Modyfikatory tekstu}\label{chapter:rozdzialtrzeci}
+    \section{Kroje pisma}
+    Jednym z problemów, na które często napotykają się algorytmy OCR, jest pismo odręczne (oraz kroje pisma je imitujące).
+    Ten typ pisma jest bardzo zróżnicowany każdy człowiek ma swój własny charakter pisma. Zapisane znaki różnią się
+    kształtem, rozmiarem czy nachyleniem. Ponad to zdarza się, że w tym samym zdaniu te same znaki mogą się znacznie
+    różnić. Wszystkie te czynniki sprawiają, że wiele algorytmów OCR ma mniejszą skuteczność w rozpoznawaniu pisma
+    odręcznego od pisma maszynowego.
 
+    W tej pracy wybrano cztery kroje pisma. Pierwsze dwa mają przypominać pismo odręczne, pozostałe dwa są popularnymi
+    przykładami standardowych krojów.
+    \input{chapters/chapter3/podrozdzial1.tex}
 
-\section{Wybrane modyfikatory tekstu}
-
-{\large \textbf{Kroje pisma}}
-
-    Do wykonania autorskiego zboiru danych wykorzystano następujące kroje pisma.
-
-    \textbf{Allura Regular}
-
-    Ten krój ma symulować pismo odręczne. Jednakże jak widać na poniższej próbce 
-    (Rys \ref{fig:allura}) znaki w tym kroju są ze sobą połączone. Może to utrudniać
-    rozpoznanie poszczególnych znaków, co wpłynie na wyniki algorytmów.
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=\textwidth]{images/Allura.png}
-        \caption{}\label{fig:allura}
-    \end{figure}
+    \section{Zniekształcenia obrazu}
+    Kolejnym problemem jest jakość dostarczonego obrazu. W rzeczywistości rzadko spotykane są przypadki gdy, skanowany tekst
+    jest równomiernie oświetlony, nie ma na nim cieni lub papier, na którym znajduje się tekst, jest niepogięty. Takie 
+    zniekształcenia mogą utrudnić rozdzielenie tekstu od tła, przez co skuteczność algorytmu zmaleje.
     
-    \textbf{Caveat}
-
-    Podobnie jak poprzedni krój, Caveat ma przypominać pismo odręcznie. Jednakże
-    w przeciweństwie do poprzednika w tym kroju znaki są wraźnie rozdzielone 
-    (Rys \ref{fig:caveat}).
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=\textwidth]{images/Caveat.png}
-        \caption{}\label{fig:caveat}
-    \end{figure}
-
-
-    \textbf{Times New Roman}
-    
-    W przeciwieństwie do poprzednich krojów Times New Roman nie jest stylizowany
-    na pismo odręczne (Rys \ref{fig:times}). Jest to jeden z bardziej popularnych
-    krojów szeryfowych. Szeryfy to poprzeczne lub ukośne zakończenia głównych %% Citation needed 
-    pociągnięć znaków.
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=\textwidth]{images/Times.png}
-        \caption{}\label{fig:times}
-    \end{figure}
-
-    \textbf{Ubuntu}
-
-    Kroje szeryfowe są popularne w publikacjach papierowych, jednakże podczas
-    czytania tekstu elektronicznego mogą być one męczące dla oczu. Dlatego 
-    obecnie coraz częściej stosowane są kroje bez-szeryfowe (ang. sans-sreif).
-    Ubuntu jest przykładem takiego kroju (Rys \ref{fig:ubuntu}).
-
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=\textwidth]{images/Ubuntu.png}
-        \caption{}\label{fig:ubuntu}
-    \end{figure}
-
-{\large \textbf{Zniekształcenia obrazu}}
-
-    \begin{enumerate}
-        \item
-    \end{enumerate}
-
-
-\section{Akwizycja danych}
-    
-{\large \textbf{Interfejs programistyczny WolneLektury.pl}}
-
-
-%% Listing funkcji do scrapowania
-
-{\large \textbf{Ekstrakcja tekstu}}
-
-%% Listing funkcji do ekstrakcji tekstu i podziału na strony
-
-{\large \textbf{Przygotowanie obrazów}}
-
-%% Listing funkcji do generowania obrazów
+    W tej pracy wybrano trzy rodzaje takich zniekształceń obrazu. Są to:
+    \input{chapters/chapter3/podrozdzial2.tex}
 

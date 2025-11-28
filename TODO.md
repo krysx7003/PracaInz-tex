@@ -1,0 +1,25 @@
+# TODO
+
+- [x] Napisać rozdział Wstęp
+- [x] Napisać rozdział Przegląd literatury
+- [ ] Zmienić nazwę podrozdziału Metryki -> Metryka CER
+- [ ] Usunąć WER
+- [ ] Dodać opis szumu perlina
+- [ ] Dodać opis testu stat
+- [ ] ~~Napisać rozdział Aspekt inż~~
+- [x] Podzielić rozdział Aspekt inż na dwa
+- [x] Przenieść tekst z rozdziału do podrozdziałów
+- [x] Nowy rozdział Modyfikatory tekstu
+- [ ] Napisać Modyfikatory tekstu
+- [ ] Przenieść opis kroju pisma z Wstępu
+- [ ] Przenieść opis zniekształceń obrazu z Wstępu
+- [x] Nowy rozdział Akwizycja danych
+- [ ] Napisać Akwizycja danych
+- [ ] ~~Napisać rozdział Aspekt badawczy~~
+- [x] Podzielić rozdział Aspekt badawczy na dwa
+- [x] Nowy rozdział Plan eksperymentów
+- [ ] Napisać Plan eksperymentów
+- [x] Nowy rozdział Wyniki
+- [ ] Napisać Plan eksperymentów
+- [ ] Napisać rozdział Podsumowanie
+- [ ] Napisać abstrakt

@@ -1,5 +1,27 @@
-% Metryki
-Do oceny wyników zastosowano dwie główne metryki. \nameref{sec:CER} i \nameref{sec:WER} zasadniczą różnicą między nimi
-jest celność porównań. CER porównuje na poziomie pojedynczych znaków natomiast, z kolei WER porównuje na poziomie 
-poszczególnych słów. Z tego powodu CER jest przydatniejsze w kontekstach w których nawet pojedynczy znak może zmienić
-znaczenie słowa (np. w medycynie). Natomiast WER jest lepsze do porównywania spójności zdań itp.
+CER (Character Error Rate z ang. częstotliwość błędnych znaków) to metryka dzięki której możliwa jest ocena
+różnic między tekstem wytworzonym poprzez model OCR a tekstem rzeczywistym. W tym 
+przypadku CER obliczane jest poprzez zsumowanie operacji(wstawień, usunięć oraz zamian znaków) potrzebnych
+do uzyskania tekstu rzeczywistego. 
+
+\[
+    CER=\frac{S+D+I}{N_c}
+\]
+Gdzie:
+\begin{itemize}
+    \item S - Liczba zamian znaków (ang. Substitutions)
+    \item D - Liczba usunięć znaków (ang. Deletions)
+    \item I - Liczba wstawień znaków (ang. Inserts)
+    \item $N_c$ - Liczba znaków w tekście (ang. Number of characters)
+\end{itemize}
+
+{\raggedright
+Na przykład:
+
+    \textbf{Tekst orginalny: }Życiem wschód, śmiercia południe;
+
+    \textbf{Tekst wygenerowany przez model: }Zyciem wschod, siercia poudniex;
+}
+
+Aby przekształcić tekst wygenerowany do tekstu oryginalnego należy wykonać 4 zamiany (Brakujące znaki polskie),
+1 wstawienie (Brakujące 'm' w tekście wygenerowanym) oraz 1 usunięcie ('x' nie występuje w tekście oryginalnym).
+Więc $CER=6/28=0.2141\approx 21.4\%$

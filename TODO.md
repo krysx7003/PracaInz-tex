@@ -2,19 +2,19 @@
 
 - [x] Napisać rozdział Wstęp
 - [x] Napisać rozdział Przegląd literatury
-- [ ] Zmienić nazwę podrozdziału Metryki -> Metryka CER
-- [ ] Usunąć WER
+- [x] Zmienić nazwę podrozdziału Metryki -> Metryka CER
+- [x] Usunąć WER
 - [ ] Dodać opis szumu perlina
 - [ ] Dodać opis testu stat
 - [ ] ~~Napisać rozdział Aspekt inż~~
 - [x] Podzielić rozdział Aspekt inż na dwa
 - [x] Przenieść tekst z rozdziału do podrozdziałów
 - [x] Nowy rozdział Modyfikatory tekstu
-- [ ] Napisać rozdział Modyfikatory tekstu
+- [x] Napisać rozdział Modyfikatory tekstu
 - [x] Przenieść opis kroju pisma z Wstępu
 - [x] Przenieść opis zniekształceń obrazu z Wstępu
 - [x] Nowy rozdział Akwizycja danych
-- [ ] Napisać rozdział Akwizycja danych
+- [x] Napisać rozdział Akwizycja danych
 - [ ] ~~Napisać rozdział Aspekt badawczy~~
 - [x] Podzielić rozdział Aspekt badawczy na dwa
 - [x] Nowy rozdział Plan eksperymentów

@@ -12,6 +12,12 @@
         label={lst:generate_tilt}
     ]{code/generate_tilt.py} 
 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{images/page_wrinkle.png}
+        \caption{Fragment tekstu po nałożeniu efektu zmiętej kartki}\label{fig:page_wrinkle}
+    \end{figure}
+
 {\RaggedRight \large \textbf{Zacienienie}}
 
     Na oryginalny obraz nałożono losowo wygenerowane cienie, wygenerowane przy pomocy metody \texttt{pnoise2} z
@@ -27,6 +33,12 @@
 
     Wygenerowany w ten sposób szum został poddany normalizacji. Następnie otrzymaną mapę cieni nałożono na 
     oryginalny obraz.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{images/page_shadow.png}
+        \caption{Fragment tekstu po zacienieniu}\label{fig:page_shadow}
+    \end{figure}
 
 {\RaggedRight \large \textbf{Efekt zmiętej kartki}}
 
@@ -45,3 +57,10 @@
     Po wygenerowaniu otrzymany szum był normalizowany, w celu otrzymania mapy przesunięć. Następnie
     otrzymaną w ten sposób mapę nakładano na oryginalny obraz przy pomocy wbudowanych funkcji biblioteki
     \texttt{cv2}.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{images/page_tilt.png}
+        \caption{Fragment tekstu po deformacji przestrzennej}\label{fig:page_tilt}
+    \end{figure}
+

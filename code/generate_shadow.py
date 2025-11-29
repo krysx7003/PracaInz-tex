@@ -35,7 +35,6 @@ class ImageGenerator:
         normalized_shadow = (shadow - shadow.min()) / (shadow.max() - shadow.min())
 
         shadow_dark = normalized_shadow * 0.9
-
         original_image = cv2.imread(input_path)
 
         shadow_rgb = cv2.cvtColor(shadow_dark.astype(np.float32), cv2.COLOR_GRAY2BGR)

@@ -10,16 +10,16 @@
 - [x] Podzielić rozdział Aspekt inż na dwa
 - [x] Przenieść tekst z rozdziału do podrozdziałów
 - [x] Nowy rozdział Modyfikatory tekstu
-- [ ] Napisać Modyfikatory tekstu
-- [ ] Przenieść opis kroju pisma z Wstępu
-- [ ] Przenieść opis zniekształceń obrazu z Wstępu
+- [ ] Napisać rozdział Modyfikatory tekstu
+- [x] Przenieść opis kroju pisma z Wstępu
+- [x] Przenieść opis zniekształceń obrazu z Wstępu
 - [x] Nowy rozdział Akwizycja danych
-- [ ] Napisać Akwizycja danych
+- [ ] Napisać rozdział Akwizycja danych
 - [ ] ~~Napisać rozdział Aspekt badawczy~~
 - [x] Podzielić rozdział Aspekt badawczy na dwa
 - [x] Nowy rozdział Plan eksperymentów
-- [ ] Napisać Plan eksperymentów
+- [ ] Napisać rozdział Plan eksperymentów
 - [x] Nowy rozdział Wyniki
-- [ ] Napisać Plan eksperymentów
+- [ ] Napisać rozdział Wyniki
 - [ ] Napisać rozdział Podsumowanie
 - [ ] Napisać abstrakt

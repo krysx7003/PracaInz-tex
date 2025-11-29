@@ -1,6 +1,47 @@
 
 {\RaggedRight \large \textbf{Przesunięcie perspektywy}}
 
+    Obrazy poddawane są losowej deformacji przestrzennej poprzez przekształcenie projektowe. Dla każdego obrazu
+    generowane są cztery współczynniki deformacji z zakresu [0.01, 0.2], które określają przemieszczenie
+    narożników. Na podstawie punktów źródłowych i docelowych obliczana jest macierz transformacji, a następnie
+    aplikowana na obraz wejściowy przy użyciu funkcji \texttt{cv2.warpPerspective}.
+
+    \lstinputlisting[     
+        language=Python,
+        caption={Fragment autorskiej klasy ImageGenerator odpowiedzialnej za generację przekrzywionych obrazów},
+        label={lst:generate_tilt}
+    ]{code/generate_tilt.py} 
+
 {\RaggedRight \large \textbf{Zacienienie}}
 
+    Na oryginalny obraz nałożono losowo wygenerowane cienie, wygenerowane przy pomocy metody \texttt{pnoise2} z
+    biblioteki \texttt{noise}, która służy do generowania losowego szumu Perlina. Dobór wartości parametrów tej
+    funkcji przeprowadzono metodą eksperymentalną, poprzez wielokrotną iterację z różnymi konfiguracjami, aż do
+    osiągnięcia pożądanego efektu w postaci delikatnego, lokalnego zacienienia.
+
+    \lstinputlisting[     
+        language=Python,
+        caption={Fragment autorskiej klasy ImageGenerator odpowiedzialnej za generację zacienionych obrazów},
+        label={lst:generate_shadow}
+    ]{code/generate_shadow.py} 
+
+    Wygenerowany w ten sposób szum został poddany normalizacji. Następnie otrzymaną mapę cieni nałożono na 
+    oryginalny obraz.
+
 {\RaggedRight \large \textbf{Efekt zmiętej kartki}}
+
+    Oryginalny obraz został poddany deformacji, obliczonej na podstawie losowo wygenrowaneg szumu Perlina.
+    W celu otrzymania tego efektu, pdobnie jak w przypadku obrazów zacienionych skorzystano z metody 
+    \texttt{pnoise2} biblioteki \texttt{noise}. Także procedura wyboru parametrów była zbliżona do
+    poprzednika. Jednakże w tym przypadku pożądanym efektem były podłużne, nieregularne formy imitujące naturalne
+    zgięcia i deformacje materiału papieru, takie jak występują w fizycznych, użytkowanych dokumentach.
+
+    \lstinputlisting[     
+        language=Python,
+        caption={Fragment autorskiej klasy ImageGenerator odpowiedzialnej za generację zmiętych obrazów},
+        label={lst:generate_wrinkle}
+    ]{code/generate_wrinkle.py} 
+
+    Po wygenerowaniu otrzymany szum był normalizowany, w celu otrzymania mapy przesunięć. Następnie
+    otrzymaną w ten sposób mapę nakładano na oryginalny obraz przy pomocy wbudowanych funkcji biblioteki
+    \texttt{cv2}.

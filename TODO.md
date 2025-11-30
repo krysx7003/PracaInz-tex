@@ -18,7 +18,7 @@
 - [ ] ~~Napisać rozdział Aspekt badawczy~~
 - [x] Podzielić rozdział Aspekt badawczy na dwa
 - [x] Nowy rozdział Plan eksperymentów
-- [ ] Napisać rozdział Plan eksperymentów
+- [x] Napisać rozdział Plan eksperymentów
 - [x] Nowy rozdział Wyniki
 - [ ] Napisać rozdział Wyniki
 - [ ] Napisać rozdział Podsumowanie

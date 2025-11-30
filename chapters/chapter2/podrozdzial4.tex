@@ -15,14 +15,14 @@ algorytmu).
 
 Implementacja szumu Perlina przebiega w trzech głównych etapach.
 
-{\RaggedRight \textbf{Definicja przestrzeni}}
+{\noindent \textbf{Definicja przestrzeni}}
 
     W pierwszym etapie generowana jest regularna siatka w przestrzeni $n$-wymiarowej,
     gdzie każdemu węzłowi siatki przypisywany jest losowy wektor jednostkowy, określający
     gradient w danym punkcie przestrzeni.
 
 
-{\RaggedRight \textbf{Obliczenie iloczynu skalarnego}}
+{\noindent \textbf{Obliczenie iloczynu skalarnego}}
 
     Dla dowolnego punktu $P$ w przestrzeni identyfikowana jest komórka siatki, w której
     się on znajduje. Następnie dla każdego wierzchołka $V_i$ tej komórki obliczany jest
@@ -32,7 +32,7 @@ Implementacja szumu Perlina przebiega w trzech głównych etapach.
         s_i = \vec{d_i} \cdot \vec{g_i}
     \]
 
-{\RaggedRight \textbf{Interpolacja}}
+{\noindent \textbf{Interpolacja}}
 
     Ostateczna wartość szumu w punkcie $P$ obliczana jest poprzez interpolację wartości
     $s_i$ uzyskanych dla wszystkich wierzchołków komórki. Interpolacja przeprowadzana jest

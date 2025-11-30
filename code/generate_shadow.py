@@ -7,10 +7,10 @@ from noise import pnoise2
 
 class ImageGenerator:
     def shadow_img(self, input_dir: str, file_name: str):
-        scale = 1000.0
+        scale = 5000.0
         octaves = 2
-        persistence = 5.0
-        lacunarity = 0.5
+        persistence = 0.5
+        lacunarity = 2.0
 
         os.makedirs(self.SHADOW_DIR, exist_ok=True)
 
@@ -34,7 +34,7 @@ class ImageGenerator:
 
         normalized_shadow = (shadow - shadow.min()) / (shadow.max() - shadow.min())
 
-        shadow_dark = normalized_shadow * 0.9
+        shadow_dark = normalized_shadow + 0.05
         original_image = cv2.imread(input_path)
 
         shadow_rgb = cv2.cvtColor(shadow_dark.astype(np.float32), cv2.COLOR_GRAY2BGR)

@@ -9,8 +9,8 @@ class ImageGenerator:
     def wrinkle_img(self, input_dir: str, file_name: str):
         scale = 500.0
         octaves = 3
-        persistence = 2.0
-        lacunarity = 1.25
+        persistence = 0.5
+        lacunarity = 2.0
 
         os.makedirs(self.WRINKLE_DIR, exist_ok=True)
 

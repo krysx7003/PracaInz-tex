@@ -4,7 +4,7 @@
 - [x] Napisać rozdział Przegląd literatury
 - [x] Zmienić nazwę podrozdziału Metryki -> Metryka CER
 - [x] Usunąć WER
-- [ ] Dodać opis szumu perlina
+- [x] Dodać opis szumu perlina
 - [ ] Dodać opis testu stat
 - [ ] ~~Napisać rozdział Aspekt inż~~
 - [x] Podzielić rozdział Aspekt inż na dwa

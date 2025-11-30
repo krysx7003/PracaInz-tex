@@ -1,0 +1,64 @@
+Ten typ generacji pseudo-losowego szumu został zaproponowany przez Kena Perlina w 1985
+\cite{perlin1985}. W przeciwieństwie do czysto losowych danych, które charakteryzują się
+ostrymi, nieciągłymi zmianami, szum Perlina generuje wartości zmieniające się w sposób
+płynny i gradualny, co lepiej odwzorowuje procesy obserwowane w środowisku naturalnym.
+
+%% Porównanie szumu 1d vs rand
+
+Algorytm, choć przedstawiony na Rysunku () na przykładzie jednowymiarowym, może być 
+rozszerzony do dwóch lub trzech wymiarów. Wielowymiarowe warianty szumu Perlina znajdują
+zastosowanie w wielu środowiskach dla przykładu w grafice komputerowej w szczególności
+podczas proceduralnej generacji tekstur. Z szumu Perlina kożysta się też w produkcji
+filmów kożystających z grafiki generowanej komputerowo (CGI) oraz tworzeniu środowisk
+w grach komputerowych(np. w grze Minecraft proces generacja terenu kożysta z tego 
+algorytmu).
+
+Implementacja szumu Perlina przebiega w trzech głównych etapach.
+
+{\RaggedRight \textbf{Definicja przestrzeni}}
+
+    W pierwszym etapie generowana jest regularna siatka w przestrzeni $n$-wymiarowej,
+    gdzie każdemu węzłowi siatki przypisywany jest losowy wektor jednostkowy, określający
+    gradient w danym punkcie przestrzeni.
+
+
+{\RaggedRight \textbf{Obliczenie iloczynu skalarnego}}
+
+    Dla dowolnego punktu $P$ w przestrzeni identyfikowana jest komórka siatki, w której
+    się on znajduje. Następnie dla każdego wierzchołka $V_i$ tej komórki obliczany jest
+    wektor przesunięcia $\vec{d_i} = P - V_i$ oraz iloczyn skalarny między tym wektorem a
+    wektorem gradientu przypisanym do wierzchołka:
+    \[
+        s_i = \vec{d_i} \cdot \vec{g_i}
+    \]
+
+{\RaggedRight \textbf{Interpolacja}}
+
+    Ostateczna wartość szumu w punkcie $P$ obliczana jest poprzez interpolację wartości
+    $s_i$ uzyskanych dla wszystkich wierzchołków komórki. Interpolacja przeprowadzana jest
+    przy użyciu funkcji wygładzającej, która zapewnia ciągłość pochodnych na granicach
+    komórek.   
+    \vspace{0.5em}
+    
+    W wykorzystanej implementacji, która pochodzi z biblioteki \texttt{noise} podczas 
+    generacji szumu Perlina można podać następujące parametry.
+
+\begin{enumerate}
+    \item \textbf{x,y} - Kordynaty generowanego punktu.
+    \item \textbf{Liczba oktaw (Octaves)} - Określa ilość nakładanych warstw szumu.
+        Większa liczba oktaw powoduje dodanie detali o wyższych częstotliwościach, co
+        skutkuje bardziej złożonym i szczegółowym wzorem wyjściowym.
+    \item \textbf{Trwałość (Persistence)} - Współczynnik określający amplitudę kolejnych
+        oktaw. Przyjmuje wartości z zakresu [0, 1]. Wysokie wartości powodują 
+        zachowanie większej ilości szczegółów, generując ostrzejsze wzory. Natomiast
+        niskie wartości bardziej wygładzonych rezultatów.
+    \item \textbf{Lacunarity} - Parametr określający współczynnik zmiany częstotliwości
+        między kolejnymi oktawami. Wartość musi być większa od 1. Wyższe wartości
+        powodują szybszy wzrost częstotliwości w kolejnych oktawach, co skutkuje
+        większym zróżnicowaniem skali detali.
+    \item \textbf{Repeatx} - Parametr określający powtarzalność szumu w osi X. Jeżeli
+        parametr ten równa się szerokości obrazu wzór nie będzie się powtarzał.
+    \item \textbf{Repeaty} - Parametr określający powtarzalność szumu w osi Y. Jeżeli
+        parametr ten równa się wysokości obrazu wzór nie będzie się powtarzał.
+
+\end{enumerate}

@@ -41,6 +41,11 @@ Mindee.
 \newblock doctr: Document text recognition.
 \newblock \url{https://github.com/mindee/doctr}, 2021.
 
+\bibitem{perlin1985}
+K.~Perlin.
+\newblock An image synthesizer.
+\newblock {\em ACM SIGGRAPH Computer Graphics}, 19(3):287--296, 1985.
+
 \bibitem{ayyasamy2015}
 V.~S and S.~A.
 \newblock Performance comparison of ocr tools.

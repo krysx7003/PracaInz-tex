@@ -2,22 +2,22 @@
 Tesseract OCR to najstarszy z wybranych algorytmów optycznego rozpoznawania znaków.
 Został on stworzony przez firmę HP w latach 1984 - 1994.
 Obecnie Tesseract jest jednym z najpopularniejszych algorytmów OCR w kręgach akademickich\cite{ayyasamy2015,li2023,chowdhury2025}
-Do badań użyto wersji 5.3.4 jest to znaczące gdyż wcześniejsze wersje algorytmu(do wersji 3 włącznie) nie wykorzystywały sieci neuronowych.
+Do badań użyto wersji 5.3.4; jest to znaczące, gdyż wcześniejsze wersje algorytmu(do wersji 3 włącznie) nie wykorzystywały sieci neuronowych.
 Algorytm ten działa w następujących krokach:
 \begin{enumerate}
     \item Analiza komponentów, gdzie zarys tych komponentów jest przechowywany. 
-        Takie podejście mimo że nakłada dodatkowe koszty obliczeniowe pozwala na łatwiejsze rozpoznawanie 
+        Takie podejście, mimo że nakłada dodatkowe koszty obliczeniowe, pozwala na łatwiejsze rozpoznawanie 
         tekstu w odwróconych kolorach (biały tekst na czarnym tle)\cite{smith2007}.
     \item Wyszukiwanie linii w komponentach. 
         Celem tego kroku była eliminacja potrzeby korekty przekrzywienia.
     \item Podział linii na słowa.
     \item Pierwsza iteracja rozpoznawania. 
-        Zaczynając na górze strony algorytm próbuje rozpoznać każde kolejne słowo. Tokeny rozpoznane z wysokim stopniem
+        Zaczynając od góry strony, algorytm próbuje rozpoznać każde kolejne słowo. Tokeny rozpoznane z wysokim stopniem
         pewności są wykorzystywane do douczenia klasyfikatora. W ten sposób z każdym kolejnym słowem
         celność klasyfikatora powinna rosnąć.
     \item Druga iteracja rozpoznawania.
-        Po wykonaniu pierwszej iteracji istnieje szanasa, że klasyfikator uzyskałby lepsze wyniki. Więc
-        po raz drugi algorytm próbuje rozpoznać tekst na stronie i aktualizuje słowa które były mniej celnie rozpoznane.
+        Po wykonaniu pierwszej iteracji istnieje szansa, że klasyfikator uzyskałby lepsze wyniki. Więc
+        po raz drugi algorytm próbuje rozpoznać tekst na stronie i aktualizuje słowa, które były mniej celnie rozpoznane.
 
 \end{enumerate}
 

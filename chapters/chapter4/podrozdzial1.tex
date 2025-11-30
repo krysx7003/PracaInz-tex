@@ -1,10 +1,10 @@
 Dane do zbioru zostały pozyskane z serwisu WolneLektury.pl. Dostęp do tych danych możliwy
-jest poprzez publiczny iterfejs programistyczny (Application Programming Interface – API),
+jest poprzez publiczny interfejs programistyczny (Application Programming Interface – API),
 dostępny pod adresem bazowym: https://wolnelektury.pl/api/.
 
 Architektura API opiera się na zasadach REST (Representational State Transfer), oferując
 strukturalny dostęp do zasobów poprzez logiczne endpointy. Serwis WolneLektury.pl
-udostępnia wiele punktów dostępu, jednakże te najważniejsze dla tej pracy to:
+udostępnia wiele punktów dostępu. Jednak te najważniejsze dla tej pracy to:
 
 \begin{itemize}
     \item /api/books/ – Wszystkie utwory
@@ -15,7 +15,7 @@ na format XML (poprzez dodanie parametru ?format=xml do zapytania). Jednakże w 
 wykorzystano domyślny format.
 
 Mechanizm filtrowania i precyzyjnego wyszukiwania rekordów realizowany jest poprzez rozbudowę
-ścieżki URL o odpowiednie parametry. Na przykład zapytanie pod adres \\ /api/authors/adam-mickiewicz/
+ścieżki URL o odpowiednie parametry. Na przykład, zapytanie pod adres \\ /api/authors/adam-mickiewicz/
 zwraca informacje o autorze "adam-mickiewicz".
 \begin{figure}[H]
     \centering
@@ -32,9 +32,9 @@ autorem jest Adam Mickiewicz.
     \includegraphics[width=\textwidth]{images/mickiewicz-books.png}
     \caption{}\label{fig:mickiewicz-books}
 \end{figure}
-Wynik takiego zapytania zawiera listę skróconych opisów pozycjii. Aby
-otrzymać dokładniejsze dane na temat danej książki należy wykorzystać atrybut "href", który zawiera
-link do sczegółowego opisu pozycji.
+Wynik takiego zapytania zawiera listę skróconych opisów pozycji. Aby
+otrzymać dokładniejsze dane na temat danej książki, należy wykorzystać atrybut "href", który zawiera
+link do szczegółowego opisu pozycji.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/ballady-i-romanse-1.png}
@@ -47,7 +47,7 @@ link do sczegółowego opisu pozycji.
     \caption{}\label{fig:ballady-2}
 \end{figure}
 
-W sczegółowych danych na temat książki najważniejsze, z punktu widzenia tej pracy, były pola "epub",
+W szczegółowych danych na temat książki najważniejsze, z punktu widzenia tej pracy, były pola "epub",
 "html","txt" oraz "xml". Zawierają one linki do pobrania zawartości książki w odpowiednim formacie.
 
 \lstinputlisting[     
@@ -55,8 +55,8 @@ W sczegółowych danych na temat książki najważniejsze, z punktu widzenia tej
     caption={Fragment kodu odpowiedzialny za pobieranie metadanych pozycji.},
     label={lst:book-list}
 ]{code/book_list.py}
-Podczas tworzenia zbioru stała AUTHOR zawierała napis "adam-mickiewicz". Ten fragment kodu
-odpowiedzialny jest za pobranie listy książek dla wybranego autora. Book to autorska
+Podczas tworzenia zbioru, stała AUTHOR zawierała napis "adam-mickiewicz". Ten fragment kodu
+ jest odpowiedzialny za pobranie listy książek dla wybranego autora. Book to autorska
 klasa służąca do deserializacji danych w formacie JSON.
 
 \lstinputlisting[     

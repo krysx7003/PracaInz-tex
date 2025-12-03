@@ -5,7 +5,7 @@
     generowane są cztery współczynniki deformacji z zakresu [0.01, 0.2], które określają przemieszczenie
     narożników. Na podstawie punktów źródłowych i docelowych obliczana jest macierz transformacji, a następnie
     aplikowana na obraz wejściowy przy użyciu funkcji \texttt{cv2.warpPerspective}.
-
+    
     \lstinputlisting[     
         language=Python,
         caption={Fragment autorskiej klasy ImageGenerator odpowiedzialnej za generację przekrzywionych obrazów},
@@ -25,6 +25,7 @@
     funkcji przeprowadzono metodą eksperymentalną, poprzez wielokrotne iterację z różnymi konfiguracjami, aż do
     osiągnięcia pożądanego efektu w postaci delikatnego, lokalnego zacienienia.
 
+    \newpage
     \lstinputlisting[     
         language=Python,
         caption={Fragment autorskiej klasy ImageGenerator odpowiedzialnej za generację zacienionych obrazów},

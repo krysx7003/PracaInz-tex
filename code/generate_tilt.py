@@ -13,7 +13,6 @@ class ImageGenerator:
 
         original_image = cv2.imread(input_path)
         height, width = original_image.shape[:2]
-
         src_points = np.float32([[0, 0], [width, 0], [0, height], [width, height]])
 
         random.seed(self.seed)
@@ -21,7 +20,6 @@ class ImageGenerator:
         tilt_tr: float = random.uniform(0.01, 0.2)
         tilt_bl: float = random.uniform(0.01, 0.2)
         tilt_br: float = random.uniform(0.01, 0.2)
-
         dst_points = np.float32(
             [
                 [width * tilt_tl, 0],

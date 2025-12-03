@@ -5,7 +5,7 @@
 - [x] Zmienić nazwę podrozdziału Metryki -> Metryka CER
 - [x] Usunąć WER
 - [x] Dodać opis szumu perlina
-- [ ] Dodać opis testu stat
+- [x] Dodać opis testu stat
 - [ ] ~~Napisać rozdział Aspekt inż~~
 - [x] Podzielić rozdział Aspekt inż na dwa
 - [x] Przenieść tekst z rozdziału do podrozdziałów
@@ -20,6 +20,6 @@
 - [x] Nowy rozdział Plan eksperymentów
 - [x] Napisać rozdział Plan eksperymentów
 - [x] Nowy rozdział Wyniki
-- [ ] Napisać rozdział Wyniki
-- [ ] Napisać rozdział Podsumowanie
+- [x] Napisać rozdział Wyniki
+- [x] Napisać rozdział Podsumowanie
 - [ ] Napisać abstrakt

@@ -36,5 +36,4 @@ class TextExtractor:
                 text_elements.append(element_text)
 
         text = "\n".join(text_elements)
-
         return text

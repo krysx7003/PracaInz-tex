@@ -1,0 +1,15 @@
+\begin{table}[!ht]
+\centering
+\caption{Wyniki algorytmów OCR dla zacienionych obrazów}
+\label{tab:shadow_summary}
+\begin{tabular}{lrrrr}
+\toprule
+ & Średnie CER & \begin{tabular}[c]{@{}l@{}}Odchylenie\\ standardowe dla CER\end{tabular} & Średni czas[s] & \begin{tabular}[c]{@{}l@{}}Odchylenie\\ standardowe dla czasu\end{tabular} \\
+\midrule
+DocTr & 0.1011 & 0.0172 & 2.6866 & 0.3602 \\
+Easyocr & 0.1831 & 0.0477 & 1.8281 & 0.2999 \\
+Paddle & 0.7344 & 0.3241 & 1.2343 & 0.2159 \\
+Tesseract & 0.7219 & 0.3406 & 1.1655 & 0.2651 \\
+\bottomrule
+\end{tabular}
+\end{table}

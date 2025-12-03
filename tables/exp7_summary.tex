@@ -1,0 +1,15 @@
+\begin{table}[!ht]
+\centering
+\caption{Wyniki algorytmów OCR dla zmiętych obrazów}
+\label{tab:wrinkle_summary}
+\begin{tabular}{lrrrr}
+\toprule
+ & Średnie CER & \begin{tabular}[c]{@{}l@{}}Odchylenie\\ standardowe dla CER\end{tabular} & Średni czas[s] & \begin{tabular}[c]{@{}l@{}}Odchylenie\\ standardowe dla czasu\end{tabular} \\
+\midrule
+DocTr & 0.0996 & 0.0187 & 2.7331 & 0.3663 \\
+Easyocr & 0.2812 & 0.0584 & 1.8696 & 0.2535 \\
+Paddle & 0.2948 & 0.2081 & 1.1853 & 0.0603 \\
+Tesseract & 0.1261 & 0.0427 & 1.5180 & 0.1989 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,1 +1,68 @@
 \Chapter{Wyniki}\label{chapter:rozdzialszosty}
+
+\section{Eksperyment 1}
+
+    \input{tables/exp1_summary_v1.tex}
+    \input{tables/exp1_results.tex}
+    
+    \input{tables/exp1_summary.tex}
+
+    Jako pierwszy, wykonano test dla wersji zbioru autorskiego, korzystającej z kroju
+    Ubuntu. Tabela \ref{tab:clean_repeat_summary} zawiera uśrednione wyniki pomiędzy pięcioma
+    powtórzeniami. Jednakże jak widać odchylenie standardowe dla CER, kluczowej metryki
+    której użyto do oceny wydajności algorytmów, jest w każdym przypadku równe 0.
+    Po dokładniejszej analizie (Tabela \ref{tab:exp1_results}) ustalono że taki wynik
+    jest poprawny. Dlatego też kolejne testy były analizowane na podstawie pierwszego
+    powtórzenia.
+
+    \input{tables/exp1_summary.tex} % IAM placeholder
+    \input{tables/exp1_summary.tex} % obd placeholder
+
+\section{Eksperyment 2}
+
+    Wyniki działania algorytmów dostępne są w tabeli \ref{tab:clean_summary}. Z tego
+    powodu nie zostały ponownie umieszczone w tej sekcji.
+    \input{tables/exp1_comparison.tex}
+
+    \input{tables/exp2_summary.tex}
+    \vspace{2em}
+    \input{tables/exp2_comparison.tex}
+
+    \input{tables/exp3_summary.tex}
+    \vspace{2em}
+    \input{tables/exp3_comparison.tex}
+
+    \input{tables/exp4_summary.tex}
+    \vspace{2em}
+    \input{tables/exp4_comparison.tex}
+
+    Warto zaznaczyć, że CER jest miarą błędu więc malejące wartości są lepsze.
+    Z tego też powodu ujemna wartość Delta np. w pierwszym wierszu tabeli 
+    \ref{tab:clean_vs} oznacza, że algorytm Paddle usyskał wynik lepszy od algorytmu
+    Tesseract w stopniu statystycznie znaczącym.    
+
+    W przeprowadzonym eksperymencie bardzo wyróżnia się algorytm Paddle. We
+    wszystkich testch dominuje nad konkurencją. Sczególnie widoczne jest
+    to dla badania przerowadzonego na zbiorze wykonanym przy użyciu kroju
+    Allura. Gdzie algorytm ten uzyskał średnie CER na poziomie 0.0775 następny
+    w kolejności algorytm (DocTr) uzyskał wynik na poziomie 0.2108. 
+
+\section{Eksperyment 3}
+
+    \input{tables/exp5_summary.tex}
+    \input{tables/exp5_comparison.tex}
+
+    \input{tables/exp6_summary.tex}
+    \input{tables/exp6_comparison.tex}
+
+    \input{tables/exp7_summary.tex}
+    \input{tables/exp7_comparison.tex}
+
+    W eksperymencie 2 algorytm Paddle miały znaczącą przewagę. Jednakże w tym
+    eksperymencie ta przewaga nie była tak znacząca. W przypadku testu dla obrazów 
+    zacienionych (tabela \ref{tab:shadow_summary}) wyniki tego algorytmu były
+    najgorsze. Co ciekawe algorytm DocTr w tym samym teście otrzymał najlepszy wynik.
+
+    Ciekawym wynikiem jest też test dla tekstów przekrzywionych. W tym teście
+    wszystkie algorytme otrzymały wynik CER bilski 0.25 (lub wyższy).
+

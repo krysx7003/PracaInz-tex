@@ -1,1 +1,60 @@
 \Chapter{Podsumowanie}\label{chapter:conclusions}
+
+{\noindent \large \textbf{Ponawiając pytania badawcze:}}
+\begin{enumerate}
+    \item W jakim stopniu opracowany autorski zbiór danych wykazuje porównywalność z uznanymi benchmarkami OCR pod względem
+        trudności i zdolności do weryfikacji podstawowej skuteczności algorytmów?
+    \item Który z badanych algorytmów OCR osiąga statystycznie istotnie lepszą efektywność dla poszczególnych krojów pisma?
+    \item Który z badanych algorytmów OCR osiąga statystycznie istotnie lepszą efektywność dla poszczególnych kategorii zniekształceń wizualnych?
+\end{enumerate}
+
+{\noindent \large \textbf{Pytanie 1}}
+
+{\noindent \large \textbf{Pytanie 2}}
+
+    Dla dokumentów korzystających z wybranych krojów pisma (Allura, Caveat, Ubuntu oraz Times New Roman)
+    najlepszą efektywność osiąga algorytm Paddle. Sczególnie dobrze widać to w przypadku w którym
+    skorzystano z kroju Allura (tabela \ref{tab:hand_connected_summary}), gdzie algorytm ten otrzymał
+    średnie CER na poziomie 0.0775. Jednoznacznie dominując nad konkurencją, drugi w kolejności był
+    algorytm DocTR z wynikiem 0.2108.
+
+    Obserwowana znaczna różnica między otrzymanymi wynikami była wynikiem oczekiwanym. Algorytm Paddle OCR
+    jako jednyny z wybranych umożliwiał wykożystanie akceleracji przy pomocy procesora graficznego(GPU). Ta
+    funkcjonalność zapewniła mu dostęp do znacznie większej mocy obliczeniowej, co bezpośrednio przełożyło
+    się na krótszy czas przetwarzania przy zachowaniu wysokiej dokładności rozpoznawania.
+
+    Wyniki algorytmu EasyOCR były niepokojące w niemal wszystkich przypadkach były one istotnie wyższe od
+    pozostałych badanych rozwiązań. Może to wskazywać na błąd w implementacji.
+    \vspace{0.5em}
+
+{\noindent \large \textbf{Pytanie 3}}
+
+    Dla dokumentów poddanych zniekształceniom wizualnym (zacienienie, przechylenie perspektywy oraz efekt zmiętej
+    kartki) najlepszą efektywność osiąga algorytm DocTR. W przeciwieństwie do poprzedniego eksperymentu ta
+    dominacja nie była tak jednoznaczna. W przypadku obrazów zacienionch DocTR otrzymał wyniki istotnie
+    niższe od pozostałych(tabela \ref{tab:shadow_summary}). W pozostałych przypadkach różnica między algorytmem
+    DocTR a pozostałymi nie były aż tak widoczne (np. w tabeli \ref{tab:tilt_summary} różnica między DocTR a Paddle
+    to jedynie 0.01).
+
+    Obserwowana wyższość algorytmu DocTR nad pozostałymi była, w tym przypadku, wynikiem oczekiwanym. DocTR
+    jest algotymem trenowanym do rozpoznawania obrazów bliższych rzeczywistym. Dla przykładu zbiór treningowy
+    zawiera obrazy przedstawiające zmięte paragony lub inne dokumenty.
+
+    Wyniki dla algorytmów Paddle oraz Tesseract otrzymane w wyniku badania na zacienionych obrazach były istotnie
+    niższe od wszystkich pozostałych. Dane otrzymane w wyniku pierwszego powtórzenia porównano z pozostałymi 
+    czteroma powtórzeniami. W wyniku tego działania potwierdzono, że dane otrzymane w kolejnych powtórzeniach
+    się nie różnią. Przez co można wykluczyć możliwość tego, że otrzymane wyniki są anomalią. Może to jednak
+    oznaczać, że efektywność tych algorytmów jest znacznie bardziej zależna od kontrastu między tekstem a 
+    tłem. Jednakże potwierdzenie tej teorii wymagać będzie dalszych badań.
+    
+    W tym eksperymencie algorytm EasyOCR otrzymał wyniki znacznie bliższe pozostałym. Co zmniejsza ryzyko błędnej 
+    implementacji.
+
+Warte odontowania są także średnie czasy analizy obrazu. Algorytm Paddle OCR uzyskiwał istotnie niższe wyniki 
+w wielu kategoriach podczas gdy czas wykonania pozostawał najniższy. Jednakże wynik ten jest zależny od zastosowania
+przyspieszenia przy pomocy procesora graficznego (wykonano jeden test w którym użyto Paddle bez przyspieszenia 
+,jednakże średni czas wykonania przekraczał 70 sekund). Drugim pod względem szybkości wykonywania był algorytm
+Tesseract, otrzymywał on wyniki bliższe algorytmowi Paddle podczas gdy czas pozostawał zbliżony do drugiego
+algortmu. Jednakże w przeciwieństwie do algorytmu Paddle Tesseract nie potrzebuje przyspieszenia GPU, więc
+może być bardziej użyteczny w środowiskach w których procesor graficzny jest nie dostępny.
+

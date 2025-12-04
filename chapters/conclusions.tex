@@ -10,6 +10,16 @@
 
 {\noindent \large \textbf{Pytanie 1}}
 
+    Wyniki obserwowane w tabeli \ref{tab:dataset_comparison}, szczególnie te dla autorskiego zbioru
+    oraz zbioru old-books, zapewniają silne statystycznie różnicowanie algorytmów (wysokie $\chi^2$ oraz
+    $p<0.0001$). Trzecia wersja autorskiego zbioru zapewnia największą różnicę między najlepszym i
+    najgorszym algorytmem. Oznacza to, że zbiór ten jest najbardziej czuły na różnice w algorytmach.
+    Zbiór IAM ma najniższą statystykę $\chi^2$ przy jednocześnie wysokim średnim CER, co sugeruje, że
+    jest trudny, ale słabiej rozróżnia algorytmy. To bezpośrednio wspiera tezę, że odpowiednio
+    zaprojektowana wersja autorskiego zbioru (tu: wersja 2 lub 3) może być lepszym narzędziem do porównywania
+    algorytmów niż standardowe benchmarki.
+    \vspace{0.5em}
+
 {\noindent \large \textbf{Pytanie 2}}
 
     Dla dokumentów korzystających z wybranych krojów pisma (Allura, Caveat, Ubuntu oraz Times New Roman)
@@ -43,6 +53,7 @@
     się nie różnią. Przez co można wykluczyć możliwość tego, że otrzymane wyniki są anomalią. Może to jednak
     oznaczać, że efektywność tych algorytmów jest znacznie bardziej zależna od kontrastu między tekstem a 
     tłem. Jednakże potwierdzenie tej teorii wymagać będzie dalszych badań.
+    \vspace{0.5em}
     
 Warte odontowania są także średnie czasy analizy obrazu. Algorytm Paddle OCR uzyskiwał istotnie niższe wyniki 
 w wielu kategoriach podczas gdy czas wykonania pozostawał najniższy. Jednakże wynik ten jest zależny od zastosowania

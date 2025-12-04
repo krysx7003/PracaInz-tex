@@ -1,18 +1,28 @@
-\Chapter{Aspekt badawczy}\label{chapter:rozdzialpiaty}
+\Chapter{Plan eksperymentów}\label{chapter:rozdzialpiaty}
 
 {\noindent \large \textbf{Pytania badawcze}}
 \begin{enumerate}
-    \item W jakim stopniu opracowany autorski zbiór danych wykazuje porównywalność z uznanymi benchmarkami OCR pod względem
-        trudności i zdolności do weryfikacji podstawowej skuteczności algorytmów?
+    \item W jaki sposób autorski zbiór danych różni się od wybranych publicznych benchmarków OCR pod względem zdolności
+        do różnicowania skuteczności analizowanych algorytmów?
     \item Który z badanych algorytmów OCR osiąga statystycznie istotnie lepszą efektywność dla poszczególnych krojów pisma?
     \item Który z badanych algorytmów OCR osiąga statystycznie istotnie lepszą efektywność dla poszczególnych kategorii zniekształceń wizualnych?
 \end{enumerate}
 
 {\noindent \large \textbf{Protokół eksperymentalny}}
 
-    W celu zapewnienia rzetelności procedury badawczej, otrzymane wyniki poddano analizie statystycznej z wykorzystaniem
-    testu parnego T-Studenta oraz nieparametrycznego testu Wilcoxona. Dla obu testów przyjęto $\alpha = 0.05$. Wszystkie
-    testy powtórzono 5-krotnie.
+    W celu zapewnienia rzetelności procedury badawczej, otrzymane wyniki poddano wielokrotnej analizie statystycznej.
+    Każdy z eksperymentów zostały powtórzony pięciokrotnie, co pozwoliło na zgromadzenie stabilnych oszacowań metryk
+    efektywności. Tak otrzymane wyniki poddano analizie statystycznej przeprowadzonej w trzech etapach:
+
+    \begin{enumerate}
+        \item \textbf{Test Friedmana} - Wstępna weryfikacja globalnej hipotezy o istnieniu różnic między porównywanymi
+            algorytmami OCR.
+        \item \textbf{Test Wilcoxona dla par} - Szczegółowe porównania parami.
+        \item \textbf{Miara Cliffa Delta} - Ocena wielkości efektu dla istotnych statystycznie różnic.
+    \end{enumerate}
+
+    Analizę przeprowadzono z poziomen istotności $\alpha$ równym $0.05$. Implementację protokołu eksperymentalnego
+    wykonano w języku Python z wykorzystaniem funkcji z biblioteki \texttt{SciPy}.
     \vspace{0.5em}
 
 \section{Scenariusze eksperymentów}

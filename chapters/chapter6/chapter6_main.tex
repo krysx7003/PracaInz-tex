@@ -15,21 +15,30 @@
     jest poprawny. Dlatego też kolejne testy były analizowane na podstawie pierwszego
     powtórzenia.
 
-    \input{tables/exp1_summary.tex} % IAM placeholder
-    \input{tables/exp1_summary.tex} % obd placeholder
+    \input{tables/exp8_summary.tex}
+    \input{tables/exp9_summary.tex}
 
-\section{Eksperyment 2 Wpływ zniekształceń obrazu}
+    \input{tables/datsets_comparison.tex}
+    W tabeli \ref{tab:dataset_comparison} wersja 1 autorskiego zbioru danych to wcześniej przedstawiona
+    wersja wykonana przy pomocy kroju pisma Ubuntu. Natomiast wersja 2 (patrz tabela 
+    \ref{tab:hand_connected_summary}) została wykonana przy pomocy kroju Allura. Wersja 3 została 
+    poddana syntetycznemu zacienieniu (patrz tabela \ref{tab:shadow_summary})
 
-    Wyniki działania algorytmów dostępne są w tabeli \ref{tab:clean_summary}. Z tego
-    powodu nie zostały ponownie umieszczone w tej sekcji.
+\section{Eksperyment 2 Wpływ krojów pisma}
+
+    Wyniki działania algorytmów, dla kroju pisma Ubuntu, są dostępne  w tabeli \ref{tab:clean_summary}.
+    Z tego powodu nie zostały ponownie umieszczone w tej sekcji.
+
+    \input{tables/friedman_1.tex}
+    Jak widać w tabeli \ref{tab:friedman_1} dla każdego z badanych przypadków różnice
+    między efektywnością algorytmów OCR istnieją oraz są one istotne.
+
     \input{tables/exp1_comparison.tex}
 
     \input{tables/exp2_summary.tex}
-    \vspace{2em}
     \input{tables/exp2_comparison.tex}
 
     \input{tables/exp3_summary.tex}
-    \vspace{2em}
     \input{tables/exp3_comparison.tex}
 
     \input{tables/exp4_summary.tex}
@@ -46,8 +55,11 @@
     to dla badania przerowadzonego na zbiorze wykonanym przy użyciu kroju
     Allura. Gdzie algorytm ten uzyskał średnie CER na poziomie 0.0775 następny
     w kolejności algorytm (DocTr) uzyskał wynik na poziomie 0.2108. 
-
-\section{Eksperyment 3 Wpływ krojów pisma}
+Wpływ zniekształceń obrazu
+\section{Eksperyment 3 Wpływ zniekształceń obrazu}
+    \input{tables/friedman_2.tex}
+    Jak widać w tabeli \ref{tab:friedman_2} dla każdego z badanych przypadków różnice
+    między efektywnością algorytmów OCR istnieją oraz są one istotne.
 
     \input{tables/exp5_summary.tex}
     \input{tables/exp5_comparison.tex}

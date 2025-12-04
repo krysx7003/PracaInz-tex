@@ -1,0 +1,16 @@
+\begin{table}[h]
+\centering
+
+\caption{Wyniki algorytmów OCR dla badania na zbiorze old-books-dataset}
+\label{tab:odb_summary}
+\begin{tabular}{lrrrr}
+\toprule
+ & Średnie CER & \begin{tabular}[c]{@{}l@{}}Odchylenie\\ standardowe dla CER\end{tabular} & Średni czas[s] & \begin{tabular}[c]{@{}l@{}}Odchylenie\\ standardowe dla czasu\end{tabular} \\
+\midrule
+DocTr & 0.0299 & 0.0417 & 3.6856 & 1.2912 \\
+Easyocr & 0.3258 & 0.1087 & 2.2864 & 1.2272 \\
+Paddle & 0.1420 & 0.1207 & 1.1341 & 0.4799 \\
+Tesseract & 0.0252 & 0.0637 & 1.0579 & 0.3747 \\
+\bottomrule
+\end{tabular}
+\end{table}

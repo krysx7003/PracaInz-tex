@@ -1,0 +1,16 @@
+\begin{table}[h]
+\centering
+
+\caption{Wyniki algorytmów OCR dla badania na zbiorze IAM}
+\label{tab:iam_summary}
+\begin{tabular}{lrrrr}
+\toprule
+ & Średnie CER & \begin{tabular}[c]{@{}l@{}}Odchylenie\\ standardowe dla CER\end{tabular} & Średni czas[s] & \begin{tabular}[c]{@{}l@{}}Odchylenie\\ standardowe dla czasu\end{tabular} \\
+\midrule
+DocTr & 0.2046 & 0.0505 & 2.5706 & 0.2630 \\
+Easyocr & 0.4911 & 0.0511 & 1.7012 & 0.1851 \\
+Paddle & 0.3283 & 0.0992 & 1.2588 & 0.0864 \\
+Tesseract & 0.3130 & 0.0555 & 1.6666 & 0.2016 \\
+\bottomrule
+\end{tabular}
+\end{table}

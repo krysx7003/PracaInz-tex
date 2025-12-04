@@ -9,8 +9,8 @@ posłużyć się przykładem cyklu „Ballady i romanse” Adama Mickiewicza, kt
 osobnych utworów. Tymczasem pliki w formatach TXT, HTML i XML dostępne do pobrania dla tego cyklu
 zawierają wyłącznie tekst pojedynczego wiersza „To lubię”, pomijając pozostałe części dzieła.
 
-Wobec powyższych ograniczeń, ostatecznym wyborem formatu źródłowego do budowy korpusu wybrany 
-został format EPUB. Format ten można traktować jako format binarny, jednakże w rzeczywistości
+Wobec powyższych ograniczeń ostatecznym wyborem formatu źródłowego do budowy korpusu 
+został format EPUB. Format ten można traktować jako format binarny, jednak w rzeczywistości
 jest to archiwum zawierające ustrukturyzowane pliki (X)HTML, metadane oraz zasoby multimedialne.
 Taka struktura znacząco komplikuje proces ekstrakcji tekstu w porównaniu z prostymi formatami
 tekstowymi. Aby uprościć proces wydobywania tekstu z plików EPUB, wykorzystano biblioteki:
@@ -24,6 +24,6 @@ w książce.
     label={lst:extract}
 ]{code/extract.py}
 Plik źródłowy zostaje otwarty przy pomocy funkcji z biblioteki \texttt{EbookLib}. Otrzymane
-w ten sposób to pliki składowe archiwum jakim jest format EPUB. Pliki te składają się z 
+w ten sposób to pliki składowe archiwum, jakim jest format EPUB. Pliki te składają się z 
 wielu elementów, jednakże na potrzeby tej pracy wykorzystano dane z elementów typu
 "h2" i "div". Zawierają one odpowiednio nagłówki oraz główny tekst z publikacji.

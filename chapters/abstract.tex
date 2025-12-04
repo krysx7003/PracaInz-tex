@@ -2,12 +2,12 @@
 
 Celem poniższej pracy było wykonanie autorskiego zbioru danych, który mógłby posłużyć
 do testowania wydajności algorytmów optycznego rozpoznawania znaków.
-Zbiór został wykonany przy pomocy interfejsu programistycznego WolneLektury.pl. Co 
+Zbiór został wykonany przy pomocy interfejsu programistycznego WolneLektury.pl, Co 
 zapewniło dostęp do bogatego zbioru tekstów literackich w języku polskim, dostępnych 
 w domenie publicznej.
 
 Korpus zawiera teksty wykonane w czterech różnorodnych krojach pisma, w tym takich
-przypominających pismo odręczne. Ponadto korpus zawiera obrazy poddane syntetycznym
+, które przypominają pismo odręczne. Ponadto korpus zawiera obrazy poddane syntetycznym
 zniekształceniom wizualnym, które mają symulować rzeczywistą degradację dokumentów.
 
 Tak przygotowany zbiór danych wykorzystano do ewaluacji czterech różnych algorytmów
@@ -15,28 +15,28 @@ optycznego rozpoznawania znaków (OCR): DocTR, EasyOCR, Paddle oraz Tesseract.
 Analiza porównawcza objęła zarówno metryki dokładności (CER), jak i wydajności
 czasowej przetwarzania.
 
-Wyniki badań wskazują na statystycznie istone różnice w efektywnośći wybranych 
+Wyniki badań wskazują na statystycznie istotne różnice w efektywności wybranych 
 algorytmów w zależności od zastosowanego kroju pisma oraz rodzaju zniekształcenia.
 Opracowany zbiór danych wykazał się wartością diagnostyczną, umożliwiając identyfikację
 mocnych i słabych stron badanych implementacji OCR.
 
 \section*{Abstract}
 
-The goal of this work was creation of dataset. Its main use case would be 
-for benchmarking optical character recognition algorithms. Said dataset was 
-made using WolneLektury.pl API. Doing so, gave access to rich set of literature
-in Polish language, that made great basis for creation of said dataset. All
-books used in creation of this dataset are in public domain.
+The goal of this work was the creation of a dataset. Its main use case would be 
+for benchmarking optical character recognition algorithms. The dataset was 
+made using the WolneLektury.pl API. Doing so provided access to a rich set of literature
+in the Polish language, which formed a great basis for the creation of the dataset. All
+books used in the creation of this dataset are in the public domain.
 
-This set contains texts made using four different fonts, two of which are made
-to imitate handwriting. Additionally dataset contains images affected by 
-synthetic distortions, which should simulate realistic degradation of documents
+This set contains texts made using four different fonts, two of which are designed
+to imitate handwriting. Additionally, the dataset contains images affected by 
+synthetic distortions, which should simulate realistic degradation of document
 quality.
 
-Next, the created dataset was used in evaluating four different OCRs: DocTR, EasyOCR,
-Paddle and Tesseract. Results were analysed by comparing both their accuracy (CER)
+Next, the created dataset was used to evaluate four different OCRs: DocTR, EasyOCR,
+Paddle, and Tesseract. Results were analyzed by comparing both their accuracy (CER)
 and runtime.
 
-Results of experimentation show statistically significant differences in performances
-of OCRs depending on font and type of distortion. Dataset shows promise for diagnosing,
-benchmarking and identifying strong and weak sides of OCRs.
+Results of the experimentation show statistically significant differences in the performances
+of OCRs depending on the font and type of distortion. The dataset shows promise for diagnosing,
+benchmarking, and identifying the strengths and weaknesses of OCRs.

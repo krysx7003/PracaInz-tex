@@ -1,7 +1,42 @@
 \section*{Streszczenie}
 
-Dodaj streszczenie pracy w języku polskim. Staraj się uwzględnić wymienione na stronie tytułowej słowa kluczowe. Uwaga przedstawiony rekomendowany szablon dotyczy pracy dyplomowej pisanej w języku angielskim. W przeciwnym wypadku, student powinien samodzielnie zmienić nazwy ,,Chapter'' na ,,Rodział'' itp stosując odpowiednie pakiety systemu \LaTeX oraz ustawienia w pliku \textit{latex-settings.tex}.
+Celem poniższej pracy było wykonanie autorskiego zbioru danych, który mógłby posłużyć
+do testowania wydajności algorytmów optycznego rozpoznawania znaków.
+Zbiór został wykonany przy pomocy interfejsu programistycznego WolneLektury.pl. Co 
+zapewniło dostęp do bogatego zbioru tekstów literackich w języku polskim, dostępnych 
+w domenie publicznej.
+
+Korpus zawiera teksty wykonane w czterech różnorodnych krojach pisma, w tym takich
+przypominających pismo odręczne. Ponadto korpus zawiera obrazy poddane syntetycznym
+zniekształceniom wizualnym, które mają symulować rzeczywistą degradację dokumentów.
+
+Tak przygotowany zbiór danych wykorzystano do ewaluacji czterech różnych algorytmów
+optycznego rozpoznawania znaków (OCR): DocTR, EasyOCR, Paddle oraz Tesseract. 
+Analiza porównawcza objęła zarówno metryki dokładności (CER), jak i wydajności
+czasowej przetwarzania.
+
+Wyniki badań wskazują na statystycznie istone różnice w efektywnośći wybranych 
+algorytmów w zależności od zastosowanego kroju pisma oraz rodzaju zniekształcenia.
+Opracowany zbiór danych wykazał się wartością diagnostyczną, umożliwiając identyfikację
+mocnych i słabych stron badanych implementacji OCR.
 
 \section*{Abstract}
 
-Streszczenie  w języku angielskim.
+The goal of this work was creation of dataset. Its main use case would be 
+for benchmarking optical character recognition algorithms. Said dataset was 
+made using WolneLektury.pl API. Doing so, gave acces to rich set of literature
+in Polish language, that made great basis for creation of said dataset. All
+books used in creation of this dataset are in public domain.
+
+This set contains texts made using four different fonts, two of which are made
+to imitate handwirting. Additionally dataset contains images affected by 
+synthetic distortions, which should simulate realistic degradation of documents
+quality.
+
+Next created dataset was used in evaluating four different OCRs: DocTR, EasyOCR,
+Paddle oraz Tesseract. Results were analysed by comparing both their acuracy (CER)
+and runtime.
+
+Results of experimentation show statistically significant differences in performances
+of OCRs depending on font and type of distortion. Dataset shows promise for diagnosing,
+benchmarking and identifiying strong and weak sides of OCRs.
